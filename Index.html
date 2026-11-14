@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVC Integrated School</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fc;
+            color: white;
+        }
+
+        /* HEADER */
+        header {
+            background: #061c50;
+            padding: 20px 7%;
+            border-bottom: 5px solid #ffc400;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 40px;
+        }
+
+        .logo h2 {
+            font-size: 25px;
+        }
+
+        .logo p {
+            color: #ffc400;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .motto {
+            font-style: italic;
+            color: #fff;
+        }
+
+        nav {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffc400;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 570px;
+            background: linear-gradient(
+                90deg,
+                rgba(4, 25, 75, 0.97),
+                rgba(4, 25, 75, 0.72)
+            ),
+            url("https://images.unsplash.com/photo-1562774053-701939374585?w=1400")
+            center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 5vw, 60px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #ffc400;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffc400;
+            color: #061c50;
+            padding: 16px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        /* FEATURES */
+        .features {
+            background: #061c50;
+            padding: 60px 7%;
+            text-align: center;
+        }
+
+        .features h2 {
+            color: #ffc400;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .feature-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            padding: 25px 15px;
+            border: 1px solid #49618d;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            border-color: #ffc400;
+            transform: translateY(-5px);
+        }
+
+        .feature .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #ffc400;
+            margin-bottom: 10px;
+        }
+
+        /* ABOUT */
+        .about {
+            color: #061c50;
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #061c50;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-top: 4px solid #ffc400;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 768px) {
+            .top {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            .feature-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                min-height: 500px;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .feature-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="top">
+            <div class="logo">
+                <div class="logo-icon">🎓</div>
+                <div>
+                    <h2>IVC</h2>
+                    <p>INTEGRATED SCHOOL</p>
+                </div>
+            </div>
+
+            <div class="motto">
+                Knowledge • Excellence • Integrity
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="admission.html">Admission</a>
+            <a href="portal.html">Student Portal</a>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>
+                Welcome to <br>
+                <span>IVC Integrated School</span>
+            </h1>
+
+            <p>
+                Building future leaders through quality education,
+                innovation, discipline and excellence.
+            </p>
+
+            <a href="#admission" class="btn">
+                Apply for Admission →
+            </a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2>Why Choose IVC?</h2>
+
+        <div class="feature-container">
+
+            <div class="feature">
+                <div class="icon">📖</div>
+                <h3>Quality Education</h3>
+                <p>Providing quality learning for every student.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🏆</div>
+                <h3>Academic Excellence</h3>
+                <p>Encouraging students to achieve their best.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">👨‍🎓</div>
+                <h3>Student Development</h3>
+                <p>Building confidence, skills and leadership.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🤝</div>
+                <h3>Integrity & Discipline</h3>
+                <p>Developing responsible future leaders.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2>About Our School</h2>
+
+        <p>
+            IVC Integrated School is committed to providing
+            an excellent learning environment where students
+            can discover their potential, develop their talents
+            and prepare for a successful future.
+        </p>
+    </section>
+
+    <!-- ADMISSION -->
+    <section class="about" id="admission">
+        <h2>Admissions Are Open!</h2>
+        <p>
+            Take the first step towards a brighter future.
+            Join IVC Integrated School today.
+        </p>
+        <br>
+        <a href="mailto:info@ivcintegratedschool.org" class="btn">
+            <a href="admission.html">Contact Us to Apply</a>
+        </a>
+    </section>
+
+    <!-- STUDENT PORTAL -->
+    <section class="about" id="student">
+        <h2>Student Portal</h2>
+        <p>Student portal access will be available here.</p>
+    </section>
+
+    <!-- NEWS -->
+    <section class="about" id="news">
+        <h2>Latest News</h2>
+        <p>Stay updated with announcements and school activities.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="about" id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with IVC Integrated School for enquiries.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 IVC Integrated School. All Rights Reserved.</p>
+        <p>Knowledge • Excellence • Integrity</p>
+    </footer>
+
+</body>
+</html>

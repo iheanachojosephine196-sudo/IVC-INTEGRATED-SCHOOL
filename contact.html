@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | IVC Integrated School</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>IVC INTEGRATED SCHOOL</h1>
+        <p>We Would Love to Hear From You</p>
+        <a href="index.html">Home</a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contact-container">
+
+        <h2>Contact Us</h2>
+        <p>Have a question? We are here to help you.</p>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+
+            <h3>Our Contact Information</h3>
+
+            <p>
+                <strong>School Name:</strong>
+                IVC Integrated School
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                info@ivcintegratedschool.com
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                <a href="tel:07072280426">
+                    07072280426
+                </a>
+            </p>
+
+            <p>
+                <strong>Address:</strong>
+                Enter your school address here.
+            </p>
+
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+
+            <h3>Send Us a Message</h3>
+
+            <form id="contactForm">
+
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="subject">Subject</label>
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Enter message subject"
+                    required
+                >
+
+                <label for="message">Your Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message here"
+                    rows="6"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+            <p id="contactMessage"></p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 IVC Integrated School.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const contactForm =
+            document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("contactMessage")
+                .textContent =
+                "Thank you for contacting IVC Integrated School!";
+
+            contactForm.reset();
+
+        });
+    </script>
+
+</body>
+</html>
